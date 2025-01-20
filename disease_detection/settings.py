@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'diseasedetection-production.up.railway.app',
-    'web-production-33f4c.up.railway.app',
+    'disease-detective.up.railway.app',
     'localhost',
     '127.0.0.1',
 ]
