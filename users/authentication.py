@@ -2,6 +2,7 @@ from django.contrib.auth.backends import BaseBackend
 from rest_framework.authentication import TokenAuthentication
 
 from .models import UserCustom
+from rest_framework.exceptions import AuthenticationFailed
 
 
 class EmailBackend(BaseBackend):
@@ -9,6 +10,9 @@ class EmailBackend(BaseBackend):
         try:
             email = email or username
             user = UserCustom.objects.get(email=email)
+            if not user.is_active:
+                raise AuthenticationFailed('Email not verified.')
+                return None
             if user.check_password(password):
                 return user
         except UserCustom.DoesNotExist:

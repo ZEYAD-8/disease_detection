@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import UserCustom
+from .models import UserCustom, ContactMessage
 from django.contrib.auth.password_validation import validate_password
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -38,3 +38,9 @@ class UserCustomSerializer(serializers.ModelSerializer):
         password = validated_data.pop('password')
         user = UserCustom.objects.create_user(password=password, **validated_data)
         return user
+
+
+class ContactMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactMessage
+        fields = '__all__'

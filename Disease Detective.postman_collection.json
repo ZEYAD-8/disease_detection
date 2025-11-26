@@ -1,0 +1,726 @@
+{
+	"info": {
+		"_postman_id": "760b8a1d-db20-4e3a-869b-5a9c3a93ccf1",
+		"name": "Disease Detective",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40691710"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "yyyTTTy@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "z123456789@",
+							"type": "text"
+						},
+						{
+							"key": "password_confirm",
+							"value": "z123456789@",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "zeyad",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "elnaggar",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base}}/user/register/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yyyy@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "z123456789@",
+									"type": "text"
+								},
+								{
+									"key": "password_confirm",
+									"value": "z123456789@",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "zeyad",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "elnaggar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://disease-detective.up.railway.app/user/register/",
+							"protocol": "https",
+							"host": [
+								"disease-detective",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "197"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 22:05:39 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "U6b8y5EOQEaQSnrgreCGBQ_2823689937"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered successfully\",\n    \"token\": \"72577381baef5d915a7cac7b96a1fae4f36cca6a\",\n    \"user\": {\n        \"id\": 1,\n        \"email\": \"yyyy@gmail.com\",\n        \"is_creator\": false,\n        \"first_name\": \"zeyad\",\n        \"last_name\": \"elnaggar\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "320a7ae99d62f041d0fc823afd800232e24d0e62",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "yyyTTTy@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "z123456789@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base}}/user/login/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yyyy@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "z123456789@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://disease-detective.up.railway.app/user/login/",
+							"protocol": "https",
+							"host": [
+								"disease-detective",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 22:06:22 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "7nnMiO4YT3yS7dBc-bJjUg_2823689937"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"email\": \"yyyy@gmail.com\",\n        \"is_creator\": false,\n        \"first_name\": \"zeyad\",\n        \"last_name\": \"elnaggar\"\n    },\n    \"token\": \"72577381baef5d915a7cac7b96a1fae4f36cca6a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "72577381baef5d915a7cac7b96a1fae4f36cca6a",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base}}/user/profile/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"user",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://disease-detective.up.railway.app/user/profile/",
+							"protocol": "https",
+							"host": [
+								"disease-detective",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 22:06:45 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "mvasf6HzQFiVphl1ZdaAXg_2823689937"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"email\": \"yyyy@gmail.com\",\n    \"is_creator\": false,\n    \"first_name\": \"zeyad\",\n    \"last_name\": \"elnaggar\"\n}"
+				}
+			]
+		},
+		{
+			"name": "change_profile",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "72577381baef5d915a7cac7b96a1fae4f36cca6a",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"yyz@gmail.com\",\r\n    \"first_name\": \"kareem\",\r\n    \"last_name\": \"seif\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/user/profile/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"user",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "change_profile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"yyz@gmail.com\",\r\n    \"first_name\": \"kareem\",\r\n    \"last_name\": \"seif\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://disease-detective.up.railway.app/user/profile/",
+							"protocol": "https",
+							"host": [
+								"disease-detective",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 22:07:10 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "ngEyBtDEToyp9G8jFOqH2A_2823689937"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"email\": \"yyyy@gmail.com\",\n    \"is_creator\": false,\n    \"first_name\": \"kareem\",\n    \"last_name\": \"seif\"\n}"
+				}
+			]
+		},
+		{
+			"name": "forget",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "yyyy@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "z123456789@",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "z123456789@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base}}/user/forgot_password/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"user",
+						"forgot_password",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "forget",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yyyy@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "z123456789@",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "z123456789@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://disease-detective.up.railway.app/user/forgot_password/",
+							"protocol": "https",
+							"host": [
+								"disease-detective",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"user",
+								"forgot_password",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 22:07:30 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "MZDzqP0XQsaitGJPp7qzkQ_2823689937"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Password reset successfully\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "https://improved-alien-sharply.ngrok-free.app",
+			"type": "string"
+		}
+	]
+}

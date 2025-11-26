@@ -27,6 +27,9 @@ class UserCustom(AbstractUser):
     first_name = models.CharField(max_length=30, unique=False, blank=True, null=True)
     last_name = models.CharField(max_length=30, unique=False, blank=True, null=True)
 
+    verification_code = models.CharField(max_length=6, blank=True, null=True)
+    code_created_at = models.DateTimeField(blank=True, null=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['is_admin']
 
@@ -46,3 +49,14 @@ class UserCustom(AbstractUser):
     def __str__(self):
         return f"[{self.id}] {self.email}"
 
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=20, blank=True)
+    subject = models.CharField(max_length=512)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.name} - {self.subject}"
